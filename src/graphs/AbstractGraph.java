@@ -36,7 +36,9 @@ public abstract class AbstractGraph<V> implements Graph<V>
      *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     protected AbstractGraph() 
+            //video 2 past 24 min
     {
+        
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
