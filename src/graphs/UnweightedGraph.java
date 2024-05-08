@@ -1,7 +1,6 @@
 package graphs;
 import java.util.*;
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*<pre>
  * Class        UnweightedGraph.java
  * Description  Concrete class in the triad of defining data structures in
  *              Java with interfaces, abstract classes and concrete classes.
@@ -14,25 +13,21 @@ import java.util.*;
  * @author	<i>Niko Culevski</i>
  * @version 	%1% %2%
  * @param       <V> generic type
- *</pre>
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 public class UnweightedGraph<V> extends AbstractGraph<V> 
 {
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  UnweightedGraph()-default constructor
      * Description  Construct an empty graph
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     public UnweightedGraph() 
     {
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  UnweightedGraph()-overloaded constructor
      * Description  Construct a graph from vertices and edges stored in arrays.
      * Date         4/5/2021
@@ -40,7 +35,6 @@ public class UnweightedGraph<V> extends AbstractGraph<V>
      * @author      <i>Niko Culevski</i>
      * @param       vertices V[]
      * @param       edges int[][]
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/     
     public UnweightedGraph(V[] vertices, int[][] edges) 
     {
@@ -48,15 +42,12 @@ public class UnweightedGraph<V> extends AbstractGraph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  UnweightedGraph()-overloaded constructor
      * Description  Construct a graph from vertices and edges stored in List.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     * @param       vertices List<V>
-     * @param       edges List<Edge>
-     *</pre>
+     
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/     
     public UnweightedGraph(List<V> vertices, List<Edge> edges) 
     {
@@ -64,15 +55,12 @@ public class UnweightedGraph<V> extends AbstractGraph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  UnweightedGraph()-overloaded constructor
      * Description  Construct a graph for integer vertices 0, 1, 2 and edge list.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     * @param       edges List<V>
      * @param       numberOfVertices int
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     
     public UnweightedGraph(List<Edge> edges, int numberOfVertices) 
@@ -81,7 +69,7 @@ public class UnweightedGraph<V> extends AbstractGraph<V>
     }
     
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+     
      * Constructor  UnweightedGraph()-overloaded constructor
      * Description  Construct a graph from integer vertices 0, 1, and edge array.
      * Date         4/5/2021
@@ -89,7 +77,7 @@ public class UnweightedGraph<V> extends AbstractGraph<V>
      * @author      <i>Niko Culevski</i>
      * @param       edges int[][]
      * @param       numberOfVertices int
-     *</pre>
+    
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     public UnweightedGraph(int[][] edges, int numberOfVertices) 
     {

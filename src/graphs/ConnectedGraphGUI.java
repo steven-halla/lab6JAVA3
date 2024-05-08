@@ -12,10 +12,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import java.util.*;
 
-//54:40
 
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*<pre>
  * Class        ConnectedGraphGUI.java
  * Description  A class representing the GUI used in the Connected Graph
  *              Application. This program reads data from text files and builds
@@ -30,7 +28,6 @@ import java.util.*;
  * 
  * @see     	javax.swing.JFrame
  * @see         java.awt.Toolkit
- *</pre>
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 public class ConnectedGraphGUI extends javax.swing.JFrame
         //20:00 Min video 1
@@ -44,14 +41,12 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
 
     
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  ConnectedGraphGUI()-default constructor
      * Description  Create an instance of the GUI form, set icon image, set
      *              default button, and instantiate list and graph.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-    *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     public ConnectedGraphGUI()
     {
@@ -66,13 +61,12 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
         graph = new UnweightedGraph<>(list, numberOfVertices);
     }
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       readFromFile()
      * Description  Read text file and create ArrayList.
      * Date:        4/23/2019
      * @author      <i>Niko Culevski</i>
      * @param       fileName String
-     *</pre>
+  
      *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void readFromFile(String fileName)
     {        
@@ -305,14 +299,14 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+
      * Method       printJMenuItemActionPerformed()
      * Description  Event handler to print the for as a GUI. Calls the
      *              PrintUtilities class static printComponent method.
      * @author      <i>Niko Culevski</i>
      * Date         4/5/2021
      * History Log  7/18/2018, 4/3/2020
-    *</pre>
+ 
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void printMenuItemActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_printMenuItemActionPerformed
     {//GEN-HEADEREND:event_printMenuItemActionPerformed
@@ -320,28 +314,27 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
     }//GEN-LAST:event_printMenuItemActionPerformed
     
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+   
      * Method       quitJMenuItemActionPerformed()
      * Description  Event handler to end the application. Calls the quitJButton
      *              doClick event handler,
      * @author      <i>Niko Culevski</i>
      * Date         4/3/2020
      * History Log  7/18/2018     
-    *</pre>
+  
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void quitJMenuItemActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_quitJMenuItemActionPerformed
     {//GEN-HEADEREND:event_quitJMenuItemActionPerformed
         quitJButton.doClick();
     }//GEN-LAST:event_quitJMenuItemActionPerformed
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
-     * Method       aboutJMenuItemActionPerformed()
+         * Method       aboutJMenuItemActionPerformed()
      * Description  Create an About form and show it. 
      * @param       evt java.awt.event.KeyEvent
      * @author      <i>Niko Culevski</i>
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
-    *</pre>
+
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void aboutJMenuItemActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_aboutJMenuItemActionPerformed
     {//GEN-HEADEREND:event_aboutJMenuItemActionPerformed
@@ -349,13 +342,13 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
         aboutWindow.setVisible(true);
     }//GEN-LAST:event_aboutJMenuItemActionPerformed
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+ 
      * Method       newJMenuItemActionPerformed
      * Description  Event handler to chose a separate file for a graph. Also
      *              calls readFromFile and createGraph methods.
      * @param       evt java.awt.event.KeyEvent
      * @author      <i>Niko Culevski</i>
-     *</pre>
+
      *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void newJMenuItemActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_newJMenuItemActionPerformed
     {//GEN-HEADEREND:event_newJMenuItemActionPerformed
@@ -391,26 +384,26 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
                     }
     }//GEN-LAST:event_newJMenuItemActionPerformed
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+     
      * Method       quitJButtonActionPerformed()
      * Description  Event handler to end the application.
      * @author      <i>Niko Culevski</i>
      * Date         4/3/2020
      * History Log  7/18/2018     
-    *</pre>
+    
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void quitJButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_quitJButtonActionPerformed
     {//GEN-HEADEREND:event_quitJButtonActionPerformed
         System.exit(0);        
     }//GEN-LAST:event_quitJButtonActionPerformed
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+     
      * Method       goJButtonActionPerformed()
      * Description  Event handler to end the application.
      * @author      <i>Niko Culevski</i>
      * Date         4/3/2020
      * History Log  7/18/2018     
-    *</pre>
+    
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void goJButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_goJButtonActionPerformed
     {//GEN-HEADEREND:event_goJButtonActionPerformed
@@ -433,13 +426,13 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
     }//GEN-LAST:event_goJButtonActionPerformed
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+     
      * Method       showPictureOfGraphsMenuItemActionPerformed()
      * Description  Display picture of the two files and the graphs used.
      * @author      <i>Niko Culevski</i>
      * Date         4/3/2020
      * History Log  7/18/2018     
-    *</pre>
+    
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void showPictureOfGraphsJMenuItemActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_showPictureOfGraphsJMenuItemActionPerformed
     {//GEN-HEADEREND:event_showPictureOfGraphsJMenuItemActionPerformed
@@ -447,7 +440,7 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
     }//GEN-LAST:event_showPictureOfGraphsJMenuItemActionPerformed
     
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+     
      * Method       shortestPathJMenuItemActionPerformed()
      * Description  If the graph is connected, prompt the user to enter two 
      *              vertices and then display the shortest path between the 
@@ -455,7 +448,7 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
      * @author      <i>Niko Culevski</i>
      * Date         4/3/2020
      * History Log  7/18/2018     
-    *</pre>
+    
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void shortestPathJMenuItemActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_shortestPathJMenuItemActionPerformed
     {//GEN-HEADEREND:event_shortestPathJMenuItemActionPerformed
@@ -493,14 +486,14 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
     }//GEN-LAST:event_filesJComboBoxActionPerformed
     
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+     
      * Method       createGraph()
      * Description  Created UnweightedGraph and associated tree and decide if
      *              the graph is connected.
      * @author      <i>Niko Culevski</i>
      * Date         4/3/2020
      * History Log  7/18/2018     
-    *</pre>
+    
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void createGraph()
     {
@@ -527,14 +520,14 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
         resultsJTextArea.setText(output.toString());
     }
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    *<pre>
+    
      * Method       main()
      * Description  Displays splash screen and the main GUI form.
      * @param       args are the command line strings
      * @author      <i>Niko Culevski</i>
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
-     *</pre>
+     
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void main(String args[])
     {

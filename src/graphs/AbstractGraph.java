@@ -1,7 +1,6 @@
 package graphs;
 import java.util.*;
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*<pre>
  * Class        AbstractGraph.java
  * Description  Crucial abstract class in the triad of defining data structures
  *              in Java with interfaces, abstract classes and concrete classes.
@@ -19,7 +18,6 @@ import java.util.*;
  * @author	<i>Niko Culevski</i>
  * @version 	%1% %2%
  * @param       <V> generic type
- *</pre>
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 public abstract class AbstractGraph<V> implements Graph<V> 
 {
@@ -27,13 +25,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
     protected List<List<Edge>> neighbors = new ArrayList<>(); // Adjacency lists
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  AbstractGraph()-default constructor
      * Description  Not used
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     protected AbstractGraph() 
             //video 2 past 24 min
@@ -42,7 +38,7 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+     
      * Constructor  AbstractGraph()-overloaded constructor
      * Description  Construct a graph from vertices and edges stored in arrays.
      * Date         4/5/2021
@@ -50,7 +46,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       vertices V{}
      * @param       edges int[][]
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     protected AbstractGraph(V[] vertices, int[][] edges) 
     {
@@ -62,15 +57,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  AbstractGraph()-overloaded constructor
      * Description  Construct a graph from vertices and edges stored in List.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     * @param       vertices List<V>
-     * @param       edges List<Edge>
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     protected AbstractGraph(List<V> vertices, List<Edge> edges) 
     {
@@ -81,15 +72,12 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  AbstractGraph()-overloaded constructor
      * Description  Construct a graph for integer vertices 0, 1, 2 and edge list.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     * @param       edges List<V>
      * @param       numberOfVertices int
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     protected AbstractGraph(List<Edge> edges, int numberOfVertices) 
     {
@@ -100,7 +88,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Constructor  AbstractGraph()-overloaded constructor
      * Description  Construct a graph from integer vertices 0, 1,... and edge array.
      * Date         4/5/2021
@@ -108,7 +95,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       edges int[][]
      * @param       numberOfVertices int
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     protected AbstractGraph(int[][] edges, int numberOfVertices) 
     {
@@ -119,7 +105,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       createAdjacencyLists
      * Description  Create adjacency lists for each vertex.
      * Date         4/5/2021
@@ -127,7 +112,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       edges int[][]
      * @param       numberOfVertices int
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/    
     private void createAdjacencyLists(int[][] edges, int numberOfVertices) 
     {
@@ -138,7 +122,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       createAdjacencyLists
      * Description  Create adjacency lists for each vertex.
      * Date         4/5/2021
@@ -146,7 +129,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       edges List<Edges>
      * @param       numberOfVertices int
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/   
     private void createAdjacencyLists(List<Edge> edges, int numberOfVertices) 
     {
@@ -158,14 +140,12 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       getSize
      * Description  Overridden method to return number of vertices in the graph.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
      * @return      size int
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public int getSize() 
     {
@@ -174,7 +154,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       getVertices
      * Description  Overridden method to return number of vertices as a List 
      *              in the graph.
@@ -182,7 +161,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
      * @return      list List<V>
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public List<V> getVertices() 
     {
@@ -191,14 +169,12 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       getVertex
      * Description  Return the object for the specified vertex.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
      * @return      vertex V
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/    
     public V getVertex(int index) 
     {
@@ -207,7 +183,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       getIndex
      * Description  Return the index for the specified vertex object.
      * Date         4/5/2021
@@ -215,7 +190,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       vertex V
      * @return      index int
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/    
     public int getIndex(V v) 
     {
@@ -224,7 +198,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       getNeighbors
      * Description  Return the neighbors of the specified vertex.
      * Date         4/5/2021
@@ -232,7 +205,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       index int
      * @return      neighbors List<Integer>
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/      
     public List<Integer> getNeighbors(int index) 
     {
@@ -245,7 +217,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       getDegree
      * Description  Return the degree for a specified vertex.
      * Date         4/5/2021
@@ -253,7 +224,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       v int
      * @return      degree int
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/    
     public int getDegree(int v) 
     {
@@ -262,13 +232,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       printEdges
      * Description  Print the edges.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/     
     public void printEdges() 
     {
@@ -290,13 +258,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
      @Override
 
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       displayEdges
      * Description  Display the edges.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
 
     public String displayEdges()
@@ -319,13 +285,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       clear
      * Description  Clear graph.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/      
     public void clear() 
     {
@@ -335,7 +299,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override 
      /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       addVertex
      * Description  Add a vertex to the graph.
      * Date         4/5/2021
@@ -343,7 +306,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       vertex V
      * @return      true/false boolean
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/      
     public boolean addVertex(V vertex) 
     {
@@ -360,7 +322,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       addEdge
      * Description  Add an edge to the graph.
      * Date         4/5/2021
@@ -368,7 +329,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       e Edge
      * @return      true/false boolean
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/     
     protected boolean addEdge(Edge e) 
     {
@@ -391,7 +351,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override /** Add an edge to the graph */  
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       addEdge
      * Description  Add an edge to the graph.
      * Date         4/5/2021
@@ -400,7 +359,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @param       u int
      * @param       v int
      * @return      true/false boolean
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/  
     public boolean addEdge(int u, int v) 
     {
@@ -408,13 +366,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Class        Edge
      * Description  Edge nested class inside the AbstractGraph class.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-    *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/    
     public static class Edge 
     {
@@ -422,13 +378,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
         public int v; // Ending vertex of the edge
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
         * Constructor  Edge()-default constructor
         * Description  Construct an edge for (u, v).
         * Date         4/5/2021
         * History Log  7/18/2018, 5/7/2020
         * @author      <i>Niko Culevski</i>
-        *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
         public Edge(int u, int v) 
         {
@@ -436,7 +390,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
             this.v = v;
         }
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-         *<pre>
          * Method       equals()
          * Description  Overridden method to check equality between edges.
          * @return      true or flase boolean
@@ -444,7 +397,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
          * @author      <i>Niko Culevski</i>
          * Date         5/10/2020
          * History Log  7/18/2018  
-         *</pre>
         *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
         public boolean equals(Object obj) 
         {
@@ -454,7 +406,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override /**  */
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
      * Method       dfs
      * Description  Depth-First Search method. Obtain a DFS tree starting from 
      *              vertex vCreates a parents int array and boolean array for 
@@ -465,7 +416,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       v int
      * @return      tree Tree
-     *</pre>
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     public Tree dfs(int v) 
     {
@@ -486,7 +436,7 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     /** Recursive method for DFS search */
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+
      * Method       dfs
      * Description  Overloaded Depth-First Search method.
      * Date         4/5/2021
@@ -496,7 +446,7 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @param       parent int[]
      * @param       searchOrder List<Integer>
      * @param       isVisited boolean[]
-     *</pre>
+    
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     private void dfs(int u, int[] parent, List<Integer> searchOrder,
         boolean[] isVisited) 
@@ -517,7 +467,7 @@ public abstract class AbstractGraph<V> implements Graph<V>
 
     @Override /** Starting bfs search from vertex v */
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+    
      * Method       dfs
      * Description  Breadth-First Search method. Obtain a DFS tree starting from 
      *              vertex v. Creates a parents int array and boolean array for 
@@ -527,7 +477,7 @@ public abstract class AbstractGraph<V> implements Graph<V>
      * @author      <i>Niko Culevski</i>
      * @param       v int
      * @return      tree Tree
-     *</pre>
+
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/     
     public Tree bfs(int v) 
     {
@@ -561,13 +511,13 @@ public abstract class AbstractGraph<V> implements Graph<V>
     }
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+
      * Class        Tree
      * Description  Tree inner class inside the AbstractGraph class.
      * Date         4/5/2021
      * History Log  7/18/2018, 5/7/2020
      * @author      <i>Niko Culevski</i>
-     *</pre>
+
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
     public class Tree 
     {
@@ -576,7 +526,7 @@ public abstract class AbstractGraph<V> implements Graph<V>
         private List<Integer> searchOrder; // Store the search order
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
+  
         * Constructor   Tree()
         * Description   Construct a tree with root, parent, and searchOrder.
         * Date          4/5/2021
@@ -584,8 +534,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
         * @author       <i>Niko Culevski</i>
         * @param        root int
         * @param        parent int[]
-        * @param        searchOrder List<Integer>
-        *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
         public Tree(int root, int[] parent, List<Integer> searchOrder) 
         {
@@ -595,14 +543,12 @@ public abstract class AbstractGraph<V> implements Graph<V>
         }
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
         * Method       getRoot
         * Description  Return the root of the tree.
         * Date         4/5/2021
         * History Log  7/18/2018, 5/7/2020
         * @author      <i>Niko Culevski</i>
         * @return      root int
-        *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/  
         public int getRoot() 
         {
@@ -610,7 +556,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
         }
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
         * Method        getParent
         * Description   Return the parent of vertex v.
         * Date          4/5/2021
@@ -618,7 +563,6 @@ public abstract class AbstractGraph<V> implements Graph<V>
         * @author       <i>Niko Culevski</i>
         * @param        v int
         * @return       root int
-        *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/          
         public int getParent(int v) 
         {
@@ -626,14 +570,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
         }
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
         * Method        getSearchOrder
         * Description   Return a list representing search order.
         * Date          4/5/2021
         * History Log   7/18/2018, 5/7/2020
         * @author       <i>Niko Culevski</i>
-        * @return       list List<Integer>
-        *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/        
         public List<Integer> getSearchOrder() 
         {
@@ -641,14 +582,12 @@ public abstract class AbstractGraph<V> implements Graph<V>
         }
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
         * Method        getNumberOfVerticesFound
         * Description   Return number of vertices found.
         * Date          4/5/2021
         * History Log   7/18/2018, 5/7/2020
         * @author       <i>Niko Culevski</i>
         * @return       vertices int
-       *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/          
         public int getNumberOfVerticesFound() 
         {
@@ -656,15 +595,12 @@ public abstract class AbstractGraph<V> implements Graph<V>
         }
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
         * Method        getPath
         * Description   Return the path of vertices from a vertex to the root.
         * Date          4/5/2021
         * History Log   7/18/2018, 5/7/2020
         * @author       <i>Niko Culevski</i>
         * @param        index int
-        * @return       vertices List<V>
-        *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/          
         public List<V> getPath(int index) 
         {
@@ -681,14 +617,12 @@ public abstract class AbstractGraph<V> implements Graph<V>
         }
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
         * Method        printPath
         * Description   Print a path from the root to vertex v.
         * Date          4/5/2021
         * History Log   7/18/2018, 5/7/2020
         * @author       <i>Niko Culevski</i>
         * @param        index int
-        *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/         
         public void printPath(int index) 
         {
@@ -700,13 +634,11 @@ public abstract class AbstractGraph<V> implements Graph<V>
         }
 
         /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        *<pre>
         * Method        printTree
         * Description   Print the whole tree.
         * Date          4/5/2021
         * History Log   7/18/2018, 5/7/2020
         * @author       <i>Niko Culevski</i>
-        *</pre>
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/        
         public void printTree() 
         {

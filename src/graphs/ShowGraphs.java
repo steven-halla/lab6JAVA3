@@ -1,6 +1,6 @@
 package graphs;
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*<pre>
+
  * Class        ShowGraphs.java
  * Description  A class with the only purpose to show the content of the text
  *              files and the coresponding graphs.
@@ -12,12 +12,12 @@ package graphs;
  * @author	<i>Niko Culevski</i>
  * @version 	%1% %2%
  * @see     	javax.swing.JDialog
- *</pre>
+ 
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 public class ShowGraphs extends javax.swing.JDialog
 {
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     *<pre>
+
      * Constructor  ShowGraphs()-default constructor
      * Description  Create an instance of the GUI form with predefined image.
      * Date         4/5/2021
@@ -25,7 +25,7 @@ public class ShowGraphs extends javax.swing.JDialog
      * @author      <i>Niko Culevski</i>
      * @param       parent Frame
      * @param       modal boolean
-    *</pre>
+  
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public ShowGraphs(java.awt.Frame parent, boolean modal)
     {
