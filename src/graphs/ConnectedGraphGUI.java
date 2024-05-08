@@ -12,6 +12,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import java.util.*;
 
+//54:40
+
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 *<pre>
  * Class        ConnectedGraphGUI.java
@@ -25,6 +27,7 @@ import java.util.*;
  * History Log  7/18/2018, 5/7/2020
  * @author	<i>Niko Culevski</i>
  * @version 	%1% %2%
+ * 
  * @see     	javax.swing.JFrame
  * @see         java.awt.Toolkit
  *</pre>
@@ -101,7 +104,7 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
         }
         catch(FileNotFoundException fnfexp)
                     {
-                    JOptionPane.showMessageDialog(null, "input error -- FIle not found.",
+                    JOptionPane.showMessageDialog(null, "input errors -- FIle not found.",
                             "File Not Found Error!", JOptionPane.ERROR_MESSAGE);
                     }
     }
@@ -146,7 +149,12 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
         fileJLabel.setText("Select File:");
 
         filesJComboBox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        filesJComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GraphSample1.txt", "GraphSample2.txt" }));
+        filesJComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GraphSample1.txt", "GraphSample2.txt", "GraphSample3.txt", "GraphSample4.txt" }));
+        filesJComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filesJComboBoxActionPerformed(evt);
+            }
+        });
 
         controlJPanel.setLayout(new java.awt.GridLayout(2, 1, 3, 3));
 
@@ -371,7 +379,7 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
             }
               else
                 {
-                        JOptionPane.showMessageDialog(null, "Cannot find file",
+                        JOptionPane.showMessageDialog(null, "Cannots find file",
                                 "File Input Error", JOptionPane.WARNING_MESSAGE);
                 }
            
@@ -406,7 +414,22 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void goJButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_goJButtonActionPerformed
     {//GEN-HEADEREND:event_goJButtonActionPerformed
-        
+        try
+        {
+            resultsJTextArea.setText("");
+            output = new StringBuffer();
+            String fileComboBox = filesJComboBox.getSelectedItem().toString();
+            fileName = "src/graphs/" + fileComboBox;
+            readFromFile(fileName);
+            createGraph();
+            
+            
+        }
+        catch(Exception exp)
+        {
+            JOptionPane.showMessageDialog(null, exp.getMessage(),
+                    "Cannot create graph", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_goJButtonActionPerformed
 
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -436,8 +459,38 @@ public class ConnectedGraphGUI extends javax.swing.JFrame
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void shortestPathJMenuItemActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_shortestPathJMenuItemActionPerformed
     {//GEN-HEADEREND:event_shortestPathJMenuItemActionPerformed
-        
+        try
+        {
+            goJButtonActionPerformed(evt);
+            if(!isConnected)
+            {
+                resultsJTextArea.setText("Graph is not connected.");
+                        
+            }
+            else
+            {
+                int v1 = Integer.parseInt(JOptionPane.showInputDialog("Enter the first vertext"));
+                int v2 = Integer.parseInt(JOptionPane.showInputDialog("Enter the second vertext"));
+                goJButton.doClick();
+                AbstractGraph<Integer>.Tree tree = graph.bfs(v1);
+                List<Integer> path = tree.getPath(v2);
+                output.append("\nThe path is ");
+                for (int i = 0; i < path.size(); i++)
+                    output.append(path.get(i) + " ");
+                resultsJTextArea.setText(output.toString());
+            }
+        }
+        catch(Exception exp)
+        {
+            JOptionPane.showMessageDialog(null, "Cannot find path",
+                    "Path Error", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_shortestPathJMenuItemActionPerformed
+
+    private void filesJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filesJComboBoxActionPerformed
+        // TODO add your handling code here:
+        //48:44
+    }//GEN-LAST:event_filesJComboBoxActionPerformed
     
     /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      *<pre>
